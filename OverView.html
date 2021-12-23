@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./OverView.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/tank-remove.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <script type="text/javascript" src="jsLib/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="jsLib/S7_framework.js"></script>
+    <script type="text/javascript" src="Script/OverView.js"></script>
+    <script src="./main.js"></script>
+    <title>Scada</title>
+</head>
+
+<body>
+
+</body>
+<div id="_alarm" class="alarm error">
+    <p></p>
+</div>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Tank Level</label>
+    <ul>
+        <li><a href="./Start.html">Start</a></li>
+        <li><a class="active" href="./OverView.html">Overview</a></li>
+        <li><a href="./Data.html">Data</a></li>
+        <li><a href="./Trend.html">Trend</a></li>
+        <li><a href="./About.html">About</a></li>
+    </ul>
+</nav>
+<div class="screen">
+    <div class="tank-level">
+        <div class="img-fulltank">
+            <div class="img-loading-back">
+                <div class="img-loading" id="img-loading"></div>
+            </div>
+            <img class="img-tank" src="assets/tank-remove.png">
+            <label class="switch" id="img-switch">
+                <input type="checkbox" id="img-value">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <div class="wrapper fadeInDown">
+        <div class="box fadeIn frist">
+            <h2 class="active">Valve Status</h2>
+            <div class="content">
+                <div class="status">
+                    <div id="status_icon" class="icon-status status-1"></div>
+                </div>
+            </div>
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+        <div class="box fadeIn second">
+            <h2 class="active">OverView</h2>
+            <div class="content">
+                <div class="box-child">
+                    <h3>Data Current Value</h3>
+                    <div class="detail">
+                        <div class="box-left">
+                            <p>SetPoint:</p>
+                            <p>Tank Level:</p>
+                        </div>
+                        <div class="box-right">
+                            <p id="set_point_">1</p>
+                            <p id="tank_level_">2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-child">
+                    <h3>Measurement Unit</h3>
+                    <div class="detail">
+                        <div class="box-left">
+                            <p>Tank Level Maximum:</p>
+                            <p>Tank Level Minimum:</p>
+                        </div>
+                        <div class="box-right">
+                            <p>100 cm</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-child">
+                    <h3 id="mode_name">Mode</h3>
+                    <div class="action">
+                        <label class="switch">
+                            <input type="checkbox" id="mode" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="box-child">
+                <h3>Action</h3>
+                <div class="action">
+                    <input id="openvalve" type="submit" class="fadeIn" value="OpenValve" />
+                    <input id="closevalve" type="submit" class="fadeIn" value="CloseValve" />
+                </div>
+            </div>
+
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+    </div>
+
+</html>

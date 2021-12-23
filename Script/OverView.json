@@ -1,0 +1,9 @@
+{
+    "val" :	":="web".dataOverViewString:",
+    "len" :	"1;1;8;8;1",
+    "typ" :	"0;0;3;3;0",
+    "str" : ""
+}
+    
+<!-- AWP_In_Variable Name='"web".valve' -->
+<!-- AWP_In_Variable Name='"web".manual' --> 

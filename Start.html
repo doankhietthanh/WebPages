@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Start.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/tank-remove.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <script type="text/javascript" src="jsLib/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="jsLib/S7_framework.js"></script>
+    <script type="text/javascript" src="Script/StartOpti.js"></script>
+    <script src="./main.js"></script>
+    <title>Scada</title>
+</head>
+
+<body>
+
+</body>
+<div id="_alarm" class="alarm error">
+    <p></p>
+</div>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Tank Level</label>
+    <ul>
+        <li><a class="active" href="./Start.html">Start</a></li>
+        <li><a href="./OverView.html">Overview</a></li>
+        <li><a href="./Data.html">Data</a></li>
+        <li><a href="./Trend.html">Trend</a></li>
+        <li><a href="./About.html">About</a></li>
+    </ul>
+</nav>
+<div class="screen">
+    <div class="tank-level">
+        <div class="img-fulltank">
+            <div class="img-loading-back">
+                <div class="img-loading" id="img-loading"></div>
+            </div>
+            <img class="img-tank" src="assets/tank-remove.png">
+            <!-- <label class="switch" id="img-switch">
+                <input type="checkbox" id="img-value">
+                <span class="slider"></span>
+            </label> -->
+        </div>
+    </div>
+    <div class="wrapper fadeInDown">
+        <div class="box fadeIn frist">
+            <h2 class="active">Filling Level</h2>
+            <div class="content">
+                <div class="loading">
+                    <span class="loading-percent" id="process_percent">50%</span>
+                    <div class="process" id="process"></div>
+                </div>
+            </div>
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+        <div class="box fadeIn second">
+            <h2 class="active">Plant status</h2>
+            <div class="content">
+                <div class="status">
+                    <div id="status_icon" class="icon-status status-1"></div>
+                </div>
+                <div class="action">
+                    <input type="submit" class="fadeIn" value="Start" id="start" />
+                    <input type="submit" class="fadeIn" value="Stop" id="stop" />
+                </div>
+            </div>
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+        <div class="box fadeIn third">
+            <h2 class="active">SetPoint</h2>
+            <div class="content">
+                <p>SetPoint of the water tank between 0 and 100!</p>
+                <div class="flowrate">Setpoint: <b id="setPoint">0</b></div>
+                <div class="form">
+                    <input id="setpoint_value" type="number" class="fadeIn" placeholder="SetPoint" autocomplete="off" />
+
+                    <input type="submit" class="fadeIn" value="Set a new SetPoint" id="setpoint_value_btn" />
+                </div>
+            </div>
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

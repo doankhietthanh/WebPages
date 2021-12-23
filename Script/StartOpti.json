@@ -1,0 +1,10 @@
+{
+    "val" :	":="web".dataStartString:",
+    "len" :	"1;8;8",
+    "typ" :	"0;3;3",
+    "str" : ""
+}
+    
+<!-- AWP_In_Variable Name='"web".start' -->
+<!-- AWP_In_Variable Name='"web".stop' -->    
+<!-- AWP_In_Variable Name='"web".setPointValue' -->    

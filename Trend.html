@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Start.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/tank-remove.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <script type="text/javascript" src="jsLib/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="jsLib/S7_framework.js"></script>
+    <script type="text/javascript" src="jsLib/chart.js"></script>
+    <script type="text/javascript" src="Script/Trend.js"></script>
+    <script src="./main.js"></script>
+    <title>Scada</title>
+</head>
+
+<body>
+
+</body>
+<div id="_alarm" class="alarm error">
+    <p></p>
+</div>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Tank Level</label>
+    <ul>
+        <li><a href="./Start.html">Start</a></li>
+        <li><a href="./OverView.html">Overview</a></li>
+        <li><a href="./Data.html">Data</a></li>
+        <li><a class="active" href="./Trend.html">Trend</a></li>
+        <li><a href="./About.html">About</a></li>
+    </ul>
+</nav>
+<div class="screen">
+    <div class="tank-level">
+        <div class="img-fulltank">
+            <div class="img-loading-back">
+                <div class="img-loading" id="img-loading"></div>
+            </div>
+            <img class="img-tank" src="assets/tank-remove.png">
+            <!-- <label class="switch" id="img-switch">
+                <input type="checkbox" id="img-value">
+                <span class="slider"></span>
+            </label> -->
+        </div>
+    </div>
+    <div class="wrapper fadeInDown">
+        <div class="box fadeIn frist trend">
+            <h2 class="active">Trend</h2>
+            <canvas id="myChart"></canvas>
+            <div id="boxFooter">
+                <a class="underlineHover" href="#">________________</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
